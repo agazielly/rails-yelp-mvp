@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Restaurants</h1>
+
+  <ol>
+    <% @restaurants.each do |restaurant| %>
+      <li><%= link_to "📄", restaurant_path(restaurant) %> <%= restaurant.name %> - <%= restaurant.category.capitalize %></li>
+    <% end %>
+  </ol>
+
+  <p><%= link_to "📝 Add a new restaurant", new_restaurant_path, class:"btn btn-primary" %></p>
+</div>
+
